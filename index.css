@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.gameArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-image: url(galaxyBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .basket{
+        position: absolute;
+        height: 150px;
+        width: 120px;
+        background-image: url(basket.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 45%;
+        bottom: 2%;
+    }
+}
+.object{
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+}
+.control{
+    position: absolute;
+    left: 45%;
+    bottom: 0px;
+    font-size: 45px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 20px;
+
+    .right{
+        cursor: pointer;
+    }
+    .left{
+        cursor: pointer;
+    }
+}
