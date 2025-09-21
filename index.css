@@ -2,6 +2,31 @@
     padding: 0;
     margin: 0;
 }
+/* Phones */
+@media (max-width: 320px) {
+    .basket { width: 60px; height: 90px; }
+    .object { font-size: 18px; width: 20px; height: 20px; }
+    body{ width: 320px; height: 750px;}
+}
+@media (min-width:321px) and (max-width: 480px) {
+    .basket { width: 60px; height: 90px; }
+    .object { font-size: 18px; width: 20px; height: 20px; }
+    body{ width: 480px; height: 750px;}
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .basket { width: 90px; height: 120px; }
+    .object { font-size: 22px; width: 25px; height: 25px; }
+    body{ width: 768px; height: 750px;}
+}
+
+/* Desktops (769px and up) */
+@media (min-width: 769px) {
+    .basket { width: 120px; height: 150px; }
+    .object { font-size: 24px; width: 30px; height: 30px; }
+    body{ width: 1550px; height: 750px;}
+}
 body{
     display: flex;
     justify-content: center;
