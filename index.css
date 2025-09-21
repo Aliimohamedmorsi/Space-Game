@@ -15,7 +15,7 @@ body{
     height: 100%;
     width: 100%;
     display: block;
-    background-image: url(galaxyBG.jpg);
+    background-image: url(assets/galaxyBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -23,7 +23,7 @@ body{
         position: absolute;
         height: 150px;
         width: 120px;
-        background-image: url(basket.png);
+        background-image: url(assets/basket.png);
         background-repeat: no-repeat;
         background-size: contain;
         left: 45%;
