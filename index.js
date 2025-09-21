@@ -57,13 +57,6 @@ function spawnObject(){
     },30);
 }
 
-document.addEventListener("keydown",(e) =>{
-    console.log("basketX", basketX)
-    if(e.key === "ArrowLeft" && basketX > 0) basketX -=50;
-    if(e.key === "ArrowRight" && basketX < 1540) basketX +=50;
-    basket.style.left = basketX + "px";
-});
-
 restartBtn.addEventListener("click", () =>{
     clearInterval(gameInterval);
     document.querySelectorAll(".object").forEach(e => e.remove());
@@ -73,13 +66,75 @@ restartBtn.addEventListener("click", () =>{
 let rightArr = document.querySelector(".right");
 let leftArr = document.querySelector(".left");
 
-rightArr.addEventListener("click",() =>{
-    basketX +=150;
-    basket.style.left = basketX + "px";
-})
-leftArr.addEventListener("click",() =>{
-    basketX -=150;
-    basket.style.left = basketX + "px";
-})
+
+if (window.matchMedia("(max-width: 320px)").matches) {
+    console.log("This is a phone screen");
+    document.addEventListener("keydown",(e) =>{
+        console.log("basketX", basketX)
+        if(e.key === "ArrowLeft" && basketX > 0) basketX -=30;
+        if(e.key === "ArrowRight" && basketX < 1540) basketX +=30;
+        basket.style.left = basketX + "px";
+    });
+    rightArr.addEventListener("click",() =>{
+        basketX +=20;
+        basket.style.left = basketX + "px";
+    })
+    leftArr.addEventListener("click",() =>{
+        basketX -=20;
+        basket.style.left = basketX + "px";
+    })
+    basketX = 150;
+} else if (window.matchMedia("(min-width:321px) and (max-width: 480px)").matches) {
+    console.log("This is a tablet screen");
+    document.addEventListener("keydown",(e) =>{
+        console.log("basketX", basketX)
+        if(e.key === "ArrowLeft" && basketX > 0) basketX -=35;
+        if(e.key === "ArrowRight" && basketX < 1540) basketX +=35;
+        basket.style.left = basketX + "px";
+    });
+    rightArr.addEventListener("click",() =>{
+        basketX +=30;
+        basket.style.left = basketX + "px";
+    })
+    leftArr.addEventListener("click",() =>{
+        basketX -=30;
+        basket.style.left = basketX + "px";
+    })
+    basketX = 220;
+} else if (window.matchMedia("(min-width: 481px) and (max-width: 768px)").matches) {
+    console.log("This is a tablet screen");
+    document.addEventListener("keydown",(e) =>{
+        console.log("basketX", basketX)
+        if(e.key === "ArrowLeft" && basketX > 0) basketX -=40;
+        if(e.key === "ArrowRight" && basketX < 1540) basketX +=40;
+        basket.style.left = basketX + "px";
+    });
+    rightArr.addEventListener("click",() =>{
+        basketX +=40;
+        basket.style.left = basketX + "px";
+    })
+    leftArr.addEventListener("click",() =>{
+        basketX -=40;
+        basket.style.left = basketX + "px";
+    })
+    basketX = 340;
+} else {
+    document.addEventListener("keydown",(e) =>{
+        console.log("basketX", basketX)
+        if(e.key === "ArrowLeft" && basketX > 0) basketX -=70;
+        if(e.key === "ArrowRight" && basketX < 1540) basketX +=70;
+        basket.style.left = basketX + "px";
+    });
+    rightArr.addEventListener("click",() =>{
+        basketX +=150;
+        basket.style.left = basketX + "px";
+    })
+    leftArr.addEventListener("click",() =>{
+        basketX -=150;
+        basket.style.left = basketX + "px";
+    })
+    console.log("This is a desktop screen");
+    basketX = 750;
+}
 
 startGame();
